@@ -51,17 +51,21 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     return Scaffold(
       backgroundColor: backgroundK,
       appBar: AppBar(backgroundColor: backgroundK, elevation: 0, actions: [
-        TextButton(
-            onPressed: (){
-              Navigator.pushReplacement(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => LoginScreen()));
-            },
-            child: Text(
-              "Skip",
-              style: TextStyle(color: terK),
-            ))
+        Visibility(
+          visible: slideIndex >= 2 ? false : true,
+          child: TextButton(
+              onPressed: () {
+                Navigator.pushReplacement(context,
+                    MaterialPageRoute(builder: (context) => LoginScreen()));
+              },
+              child: Text(
+                "Skip",
+                style: TextStyle(
+                  color: terK,
+                  fontSize: 17,
+                ),
+              )),
+        )
       ]),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -89,14 +93,13 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 children: [
                   GestureDetector(
                     onTap: () {
-                       setState(() {
+                      setState(() {
                         page = _pageController.page! - 1;
                       });
                       print(page);
                       _pageController.previousPage(
                           duration: Duration(milliseconds: 500),
                           curve: Curves.easeIn);
-                     
                     },
                     child: CircleAvatar(
                       radius: 25,
@@ -127,7 +130,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                     builder: (context) => LoginScreen()));
                           },
                           child: Text(
-                            "Continue",
+                            "Get started",
                             style: TextStyle(
                               color: primaryK,
                               fontSize: 16,
@@ -144,7 +147,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                             _pageController.nextPage(
                                 duration: Duration(milliseconds: 500),
                                 curve: Curves.easeIn);
-                            
                           },
                           child: CircleAvatar(
                             radius: 25,

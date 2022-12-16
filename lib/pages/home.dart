@@ -52,7 +52,7 @@ class _HomeScreenState extends State<HomeScreen> {
             },
             icon: Icon(
               Icons.notifications_none_sharp,
-              size: 28,
+              size: 25,
               color: screen[screenIndex]['appbar'] == 'Leadership'
                   ? backgroundK
                   : primaryK,

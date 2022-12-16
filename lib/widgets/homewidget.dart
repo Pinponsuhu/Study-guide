@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:school_prep/constants/color.dart';
+import 'package:school_prep/pages/subject-details.dart';
 
 class HomeWidget extends StatelessWidget {
   const HomeWidget({
@@ -10,7 +11,7 @@ class HomeWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-        padding: EdgeInsets.all(16),
+        padding: EdgeInsets.all(20),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           // SizedBox(
           //   height: 12,
@@ -65,7 +66,12 @@ class HomeWidget extends StatelessWidget {
                 ),
               ),
               TextButton(
-                onPressed: null,
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => SubjectDetails()));
+                },
                 style: ButtonStyle(
                   padding: MaterialStateProperty.all(EdgeInsets.zero),
                 ),

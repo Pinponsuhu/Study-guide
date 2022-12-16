@@ -25,23 +25,24 @@ class _ForgotPasswordState extends State<ForgotPassword> {
             },
             icon: Icon(
               Icons.arrow_back_ios,
-              color: terK,
+              color: Colors.black,
+              size: 20,
             )),
       ),
       body: Container(
-        padding: EdgeInsets.all(16),
+        padding: EdgeInsets.all(20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             AspectRatio(
-              aspectRatio: 26 / 16,
+              aspectRatio: 25 / 14,
               child: SvgPicture.asset('asset/svg/forgot.svg'),
             ),
             SizedBox(
-              height: 12,
+              height: 16,
             ),
             Text(
-              "Forgot \n Password?",
+              "Forgot \nPassword?",
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 26,
@@ -49,20 +50,21 @@ class _ForgotPasswordState extends State<ForgotPassword> {
               ),
             ),
             SizedBox(
-              height: 12,
+              height: 16,
             ),
             Text(
               "Don't worry! it happens. Please enter the email address associated with your account",
               style: TextStyle(
                 fontSize: 18,
                 color: terK,
+                height: 1.5,
               ),
             ),
             SizedBox(
               height: 12,
             ),
             Container(
-              padding: EdgeInsets.all(8),
+              padding: EdgeInsets.all(4),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(8),
                 border: Border.all(width: 2, color: terK),
@@ -72,7 +74,10 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                   SizedBox(
                     child: IconButton(
                         onPressed: null,
-                        icon: Icon(Icons.alternate_email_rounded)),
+                        icon: Icon(
+                          Icons.alternate_email_rounded,
+                          size: 18,
+                        )),
                   ),
                   Expanded(
                     child: TextFormField(
@@ -94,7 +99,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                 padding: MaterialStateProperty.all(EdgeInsets.zero),
               ),
               child: Container(
-                padding: EdgeInsets.symmetric(vertical: 20),
+                padding: EdgeInsets.symmetric(vertical: 18),
                 width: double.infinity,
                 decoration: BoxDecoration(
                     color: primaryK, borderRadius: BorderRadius.circular(8)),

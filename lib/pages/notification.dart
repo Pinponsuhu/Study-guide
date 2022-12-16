@@ -29,6 +29,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
             icon: Icon(
               Icons.arrow_back_ios_new_sharp,
               color: backgroundK,
+              size: 20,
             )),
       ),
       body: SingleChildScrollView(
@@ -40,7 +41,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
               "Today",
               style: TextStyle(
                 color: backgroundK,
-                fontSize: 20,
+                fontSize: 18,
                 fontWeight: FontWeight.w500,
               ),
             ),
@@ -61,7 +62,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
                     child: Icon(
                       Icons.school,
                       color: primaryK,
-                      size: 26,
+                      size: 21,
                     ),
                   ),
                   SizedBox(width: 14),
@@ -73,6 +74,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
                           style: TextStyle(
                             fontWeight: FontWeight.w500,
                             color: backgroundK,
+                            height: 1.6,
                             fontSize: 17,
                           ),
                         ),
@@ -114,7 +116,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
-                    padding: EdgeInsets.all(10),
+                    padding: EdgeInsets.all(8),
                     decoration: BoxDecoration(
                       color: Colors.cyan,
                       shape: BoxShape.circle,
@@ -122,7 +124,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
                     child: Icon(
                       Icons.leaderboard,
                       color: primaryK,
-                      size: 26,
+                      size: 21,
                     ),
                   ),
                   SizedBox(width: 14),
@@ -132,10 +134,10 @@ class _NotificationScreenState extends State<NotificationScreen> {
                         Text(
                           "The results for this week quiz contest has been uploaded",
                           style: TextStyle(
-                            fontWeight: FontWeight.w500,
-                            color: backgroundK,
-                            fontSize: 17,
-                          ),
+                              fontWeight: FontWeight.w500,
+                              color: backgroundK,
+                              fontSize: 17,
+                              height: 1.6),
                         ),
                         SizedBox(
                           height: 8,
@@ -171,7 +173,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
               "Yesterday",
               style: TextStyle(
                 color: backgroundK,
-                fontSize: 20,
+                fontSize: 18,
                 fontWeight: FontWeight.w500,
               ),
             ),
@@ -184,7 +186,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
-                    padding: EdgeInsets.all(10),
+                    padding: EdgeInsets.all(8),
                     decoration: BoxDecoration(
                       color: Colors.red,
                       shape: BoxShape.circle,
@@ -192,7 +194,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
                     child: Icon(
                       Icons.shield,
                       color: primaryK,
-                      size: 26,
+                      size: 21,
                     ),
                   ),
                   SizedBox(width: 14),
@@ -202,10 +204,10 @@ class _NotificationScreenState extends State<NotificationScreen> {
                         Text(
                           "Your account was logged in from a different device",
                           style: TextStyle(
-                            fontWeight: FontWeight.w500,
-                            color: backgroundK,
-                            fontSize: 17,
-                          ),
+                              fontWeight: FontWeight.w500,
+                              color: backgroundK,
+                              fontSize: 17,
+                              height: 1.6),
                         ),
                         SizedBox(
                           height: 8,
@@ -245,7 +247,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
-                    padding: EdgeInsets.all(10),
+                    padding: EdgeInsets.all(8),
                     decoration: BoxDecoration(
                       color: Colors.green,
                       shape: BoxShape.circle,
@@ -253,7 +255,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
                     child: Icon(
                       Icons.badge_rounded,
                       color: primaryK,
-                      size: 26,
+                      size: 21,
                     ),
                   ),
                   SizedBox(width: 14),
@@ -267,6 +269,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
                             fontWeight: FontWeight.w500,
                             color: backgroundK,
                             fontSize: 17,
+                            height: 1.6,
                           ),
                         ),
                         SizedBox(

@@ -15,7 +15,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-
       backgroundColor: backgroundK,
       appBar: AppBar(
         automaticallyImplyLeading: false,
@@ -27,34 +26,35 @@ class _RegisterScreenState extends State<RegisterScreen> {
             },
             icon: Icon(
               Icons.arrow_back_ios,
-              color: terK,
+              color: Colors.black,
+              size: 20,
             )),
       ),
-      body: Container(
-        padding: EdgeInsets.all(16),
+      body: SingleChildScrollView(
+        padding: EdgeInsets.all(20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             AspectRatio(
-              aspectRatio: 26 / 16,
+              aspectRatio: 25 / 14,
               child: SvgPicture.asset('asset/svg/login.svg'),
             ),
             SizedBox(
-              height: 12,
+              height: 16,
             ),
             Text(
               "Register",
               style: TextStyle(
                 fontWeight: FontWeight.bold,
-                fontSize: 26,
+                fontSize: 23,
                 color: primaryK,
               ),
             ),
             SizedBox(
-              height: 12,
+              height: 16,
             ),
             Container(
-              padding: EdgeInsets.all(8),
+              padding: EdgeInsets.all(4),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(8),
                 border: Border.all(width: 2, color: terK),
@@ -64,7 +64,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   SizedBox(
                     child: IconButton(
                         onPressed: null,
-                        icon: Icon(Icons.alternate_email_rounded)),
+                        icon: Icon(
+                          Icons.alternate_email_rounded,
+                          size: 18,
+                        )),
                   ),
                   Expanded(
                     child: TextFormField(
@@ -81,7 +84,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
               height: 12,
             ),
             Container(
-              padding: EdgeInsets.all(8),
+              padding: EdgeInsets.all(4),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(8),
                 border: Border.all(width: 2, color: terK),
@@ -91,7 +94,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   SizedBox(
                     child: IconButton(
                       onPressed: null,
-                      icon: Icon(Icons.person_outline_rounded),
+                      icon: Icon(
+                        Icons.person_outline_rounded,
+                        size: 18,
+                      ),
                     ),
                   ),
                   Expanded(
@@ -109,7 +115,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
               height: 12,
             ),
             Container(
-              padding: EdgeInsets.all(8),
+              padding: EdgeInsets.all(4),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(8),
                 border: Border.all(width: 2, color: terK),
@@ -118,14 +124,52 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 children: [
                   SizedBox(
                     child: IconButton(
-                        onPressed: null, icon: Icon(Icons.phone_outlined)),
+                        onPressed: null, icon: Icon(Icons.abc_outlined)),
                   ),
                   Expanded(
                     child: TextFormField(
                       decoration: InputDecoration(
                         border: InputBorder.none,
-                        hintText: "Phone number",
+                        hintText: "Username",
                       ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 12,
+            ),
+            Container(
+              padding: EdgeInsets.all(4),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(8),
+                border: Border.all(width: 2, color: terK),
+              ),
+              child: Row(
+                children: [
+                  SizedBox(
+                    child: IconButton(
+                        onPressed: null,
+                        icon: Icon(
+                          Icons.school_outlined,
+                          size: 18,
+                        )),
+                  ),
+                  Expanded(
+                    child: DropdownButtonHideUnderline(
+                      child: DropdownButton(
+                          hint: Text("Select exam"),
+                          isExpanded: true,
+                          items: [
+                            DropdownMenuItem(
+                                value: "JAMB", child: Text("JAMB")),
+                            DropdownMenuItem(
+                                value: "WAEC", child: Text("WAEC/GCE")),
+                          ],
+                          onChanged: (value) {
+                            print(value);
+                          }),
                     ),
                   ),
                 ],
@@ -140,7 +184,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 padding: MaterialStateProperty.all(EdgeInsets.zero),
               ),
               child: Container(
-                padding: EdgeInsets.symmetric(vertical: 20),
+                padding: EdgeInsets.symmetric(vertical: 18),
                 width: double.infinity,
                 decoration: BoxDecoration(
                     color: primaryK, borderRadius: BorderRadius.circular(8)),
@@ -154,7 +198,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 ),
               ),
             ),
-            Spacer(),
+            // Spacer(),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [

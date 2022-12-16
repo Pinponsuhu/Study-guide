@@ -24,13 +24,13 @@ class _LoginScreenState extends State<LoginScreen> {
         elevation: 0,
       ),
       body: Container(
-        padding: EdgeInsets.all(16),
+        padding: EdgeInsets.all(20),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             AspectRatio(
-              aspectRatio: 26 / 16,
+              aspectRatio: 20 / 10,
               child: SvgPicture.asset('asset/svg/login.svg'),
             ),
             SizedBox(
@@ -40,15 +40,15 @@ class _LoginScreenState extends State<LoginScreen> {
               "Login",
               style: TextStyle(
                 fontWeight: FontWeight.bold,
-                fontSize: 26,
+                fontSize: 23,
                 color: primaryK,
               ),
             ),
             SizedBox(
-              height: 12,
+              height: 16,
             ),
             Container(
-              padding: EdgeInsets.all(8),
+              padding: EdgeInsets.all(4),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(8),
                 border: Border.all(width: 2, color: terK),
@@ -58,7 +58,10 @@ class _LoginScreenState extends State<LoginScreen> {
                   SizedBox(
                     child: IconButton(
                         onPressed: null,
-                        icon: Icon(Icons.alternate_email_rounded)),
+                        icon: Icon(
+                          Icons.alternate_email_rounded,
+                          size: 18,
+                        )),
                   ),
                   Expanded(
                     child: TextFormField(
@@ -72,10 +75,10 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
             ),
             SizedBox(
-              height: 12,
+              height: 14,
             ),
             Container(
-              padding: EdgeInsets.all(8),
+              padding: EdgeInsets.all(4),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(8),
                 border: Border.all(width: 2, color: terK),
@@ -84,7 +87,11 @@ class _LoginScreenState extends State<LoginScreen> {
                 children: [
                   SizedBox(
                     child: IconButton(
-                        onPressed: null, icon: Icon(Icons.lock_outline)),
+                        onPressed: null,
+                        icon: Icon(
+                          Icons.lock_outline,
+                          size: 18,
+                        )),
                   ),
                   Expanded(
                     child: TextFormField(
@@ -97,7 +104,10 @@ class _LoginScreenState extends State<LoginScreen> {
                   SizedBox(
                     child: IconButton(
                         onPressed: null,
-                        icon: Icon(Icons.remove_red_eye_outlined)),
+                        icon: Icon(
+                          Icons.remove_red_eye_outlined,
+                          size: 18,
+                        )),
                   ),
                 ],
               ),
@@ -113,7 +123,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             builder: (context) => ForgotPassword()));
                   },
                   child: Container(
-                    margin: EdgeInsets.symmetric(vertical: 10),
+                    margin: EdgeInsets.symmetric(vertical: 14),
                     child: Text(
                       textAlign: TextAlign.right,
                       "Forgot Password?",
@@ -138,7 +148,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 padding: MaterialStateProperty.all(EdgeInsets.zero),
               ),
               child: Container(
-                padding: EdgeInsets.symmetric(vertical: 20),
+                padding: EdgeInsets.symmetric(vertical: 18),
                 width: double.infinity,
                 decoration: BoxDecoration(
                     color: primaryK, borderRadius: BorderRadius.circular(8)),
