@@ -97,27 +97,33 @@ class _QuizResultState extends State<QuizResult> {
                   child: Column(
                     children: [
                       Container(
-                        height: 200,
+                        height: 260,
                         child: PieChart(
                           PieChartData(
                             sectionsSpace: 0,
-                            centerSpaceRadius: 60,
+                            centerSpaceRadius: 70,
                             sections: [
                               PieChartSectionData(
+                                  radius: 56,
                                   value: 80.00,
                                   color: Colors.green.shade400,
-                                  title: "Passed",
+                                  title: "80%",
                                   titleStyle: TextStyle(
                                     color: backgroundK,
+                                    fontSize: 24,
+                                    fontWeight: FontWeight.bold,
                                   ),
                                   showTitle: true),
                               PieChartSectionData(
+                                  radius: 56,
                                   value: 20.00,
                                   color: Colors.red.shade400,
                                   titleStyle: TextStyle(
                                     color: backgroundK,
+                                    fontSize: 24,
+                                    fontWeight: FontWeight.bold,
                                   ),
-                                  title: "Failed",
+                                  title: "20%",
                                   showTitle: true)
                             ],
                           ),

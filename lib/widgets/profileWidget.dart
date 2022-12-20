@@ -16,10 +16,32 @@ class ProfileWidget extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              CircleAvatar(
-                maxRadius: 70,
-                minRadius: 50,
-                backgroundImage: AssetImage("asset/images/me.jpg"),
+              Stack(
+                // fit: StackFit.passthrough,
+                clipBehavior: Clip.none,
+                children: [
+                  Container(
+                    height: 140,
+                    width: 140,
+                    decoration: BoxDecoration(shape: BoxShape.circle),
+                    child: CircleAvatar(
+                      backgroundImage: AssetImage("asset/images/me.jpg"),
+                      radius: double.infinity,
+                    ),
+                  ),
+                  Positioned(
+                      top: 110.0,
+                      left: 74,
+                      child: Container(
+                          padding: EdgeInsets.all(8),
+                          decoration: BoxDecoration(
+                              color: primaryK,
+                              borderRadius: BorderRadius.circular(8)),
+                          child: Icon(
+                            Icons.camera_alt,
+                            color: backgroundK,
+                          )))
+                ],
               ),
             ],
           ),
@@ -38,7 +60,7 @@ class ProfileWidget extends StatelessWidget {
             height: 3,
           ),
           Text(
-            "PinponsuhuJoseph@email.com",
+            "Joskyjay",
             style: TextStyle(
               color: terK,
               fontSize: 16,

@@ -28,6 +28,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ? primaryK
           : backgroundK,
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         backgroundColor: screen[screenIndex]['appbar'] == 'Leadership'
             ? primaryK
             : backgroundK,

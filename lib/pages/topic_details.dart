@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:school_prep/constants/color.dart';
-import 'package:school_prep/pages/add_lesson.dart';
+// import 'package:school_prep/pages/add_lesson.dart';
 
 class TopicDetails extends StatefulWidget {
   TopicDetails({Key? key}) : super(key: key);
@@ -37,14 +37,7 @@ class _TopicDetailsState extends State<TopicDetails> {
         backgroundColor: backgroundK,
         actions: [
           IconButton(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => AddLesson(),
-                ),
-              );
-            },
+            onPressed: null,
             icon: Icon(
               Icons.attachment_sharp,
               color: primaryK,
